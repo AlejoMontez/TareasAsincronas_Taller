@@ -1,10 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.jonmid.tareasasincronas.PostActivity">
 
-</android.support.v7.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/id_pb_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/id_btn_loaddata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cargar datos"
+        android:onClick="loadData"/>
+
+    <Button
+        android:id="@+id/id_btn_loaddata1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        android:onClick="showV"/>
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/id_rcv_data1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+
+
+</LinearLayout>

@@ -20,12 +20,12 @@ public class Json {
         JSONArray jsonArray = new JSONArray(content);
         List<Post> postList = new ArrayList<>();
 
-        for (int i = 0; i < jsonArray.length(); i++){
+        for (int i = 0; i < 100; i++){
 
             JSONObject item = jsonArray.getJSONObject(i);
 
             Post post = new Post();
-            post.setId(item.getInt("id"));
+            post.setId(item.getString("id"));
             post.setTitle(item.getString("title"));
             post.setBody(item.getString("body"));
 
